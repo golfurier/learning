@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    OBA
+{% endblock %}
+
+{% block body %}
+    <h1>Transactions Search</h1>
+
+    <div class="container">
+        <!--<table class="w3-table w3-bordered w3-striped">-->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>CARD_NUMBER</th>
+                    <th>DATE</th>
+                    <th>TIME</th>
+                    <th>MTI</th>
+                    <th>EPS_PROC</th>
+                    <th>EPS_AMT</th>
+                    <th>EPS_RC</th>
+                    <th>B24_TRN</th>
+                    <th>B24_AMT</th>
+                    <th>B24_FEE</th>
+                    <th>B24_RC</th>
+                    <th>CARDM_TRN</th>
+                    <th>CARDM_AMT</th>
+                    <th>CARDM_RC</th>
+                    <th>CARDM_RVSL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tcr in tcrs %}
+                    <tr>
+                        <td>{{ tcr.case_num }}</td>
+                        <td>{{ tcr.mti }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

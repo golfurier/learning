@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    OBA
+{% endblock %}
+
+{% block body %}
+    <h1>Transactions Search</h1>
+
+    <div class="container">
+        <!--<table class="w3-table w3-bordered w3-striped">-->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>CARD_NUMBER</th>
+                    <th>DATE</th>
+                    <th>TIME</th>
+                    <th>MTI</th>
+                    <th>EPS_PROC</th>
+                    <th>EPS_AMT</th>
+                    <th>EPS_RC</th>
+                    <th>B24_TRN</th>
+                    <th>B24_AMT</th>
+                    <th>B24_FEE</th>
+                    <th>B24_RC</th>
+                    <th>CARDM_TRN</th>
+                    <th>CARDM_AMT</th>
+                    <th>CARDM_RC</th>
+                    <th>CARDM_RVSL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for txn in txns %}
+                    <tr>
+                        <td>{{ txn.card_no }}</td>
+                        <td>{{ txn.local_date }}</td>
+                        <td>{{ txn.local_time }}</td>
+                        <td>{{ txn.mti }}</td>
+                        <td>{{ txn.processing_code }}</td>
+                        <td>{{ txn.txn_amt }}</td>
+                        <td>{{ txn.action_code }}</td>
+                        <td>{{ txn.auth_tran_cde }}</td>
+                        <td>{{ txn.auth_amt_1 }}</td>
+                        <td>{{ txn.auth_fee_amt_1 }}</td>
+                        <td>{{ txn.resp_cde }}</td>
+                        <td>{{ txn.transcode }}</td>
+                        <td>{{ txn.amt }}</td>
+                        <td>{{ txn.resp_cde }}</td>
+                        <td>{{ txn.r }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
