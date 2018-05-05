@@ -32,8 +32,9 @@
             <tbody>
                 {% for tcr in tcrs %}
                     <tr>
-                        <td>{{ tcr.case_num }}</td>
-                        <td>{{ tcr.mti }}</td>
+                        {%for i in range(1,(tcr | length)) %}
+                            <td>{{ tcr[i] }}</td>
+                        {% endfor %}
                     </tr>
                 {% endfor %}
             </tbody>
