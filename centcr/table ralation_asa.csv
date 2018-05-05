@@ -1,0 +1,23 @@
+ public , accepters           , table    , centcr,,centcr=# select * from projects;,centcr=# select * from switchings;,centcr=# select * from transactions;
+ public , actas               , table    , centcr,, id |  proj_name, id |  sw_name, id | trans_type
+ public , departments         , table    , centcr,,----+-------------,----+------------,----+------------
+ public , projects            , table    , centcr,,  1 | VISA2018001,  1 | VISA,  1 | ATM
+ public , switchings          , table    , centcr,,,  2 | MASTERCARD,  2 | POS
+ public , testers             , table    , centcr,,,  3 | ITMX,  3 | ORFT
+ public , transactions        , table    , centcr,,,  4 | PCC,  4 | PAYMENT
+,status,,,,,(4 rows),  5 | PP
+,,,,,,,(5 rows)
+,,,,,centcr=# select * from actas;,centcr=# select * from testers;,centcr=# select * from accepters;
+,,,,, id | act_as, id | t_name  | t_lastname  | dep_id, id | a_name | a_lastname | dep_id
+,,,,,----+--------,----+---------+-------------+--------,----+--------+------------+--------
+,,,,,  1 | ACQ,  1 | Ukrit   | Koolvitit   |      1,  1 | XXX    | XXX        |      2
+,,,,,  2 | ISS,  2 | Nopsara | Sumneanglum |      1,  2 | YYY    | YYY        |      3
+,,,,,(2 rows),(2 rows),(2 rows)
+,,,,,,,
+,,,,,centcr=# select * from status;,,
+,,,,, id | status,,
+,,,,,----+---------,,
+,,,,,  1 | Passed,,
+,,,,,  2 | Failed,,
+,,,,,  3 | Pending,,
+,,,,,(3 rows),,
