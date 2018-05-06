@@ -1,0 +1,3 @@
+case_no,mti,case_name,purpose,card_no,f4,f39_exp,f39_visa,f39_mastercard,f39_itmx,f39_pcc,f39_eps,f39_clsp,f39_clst,f39_cardm,f39_cbs,seq_no,tdate,lgnt,status_id,progress_comment,project_id,switching_id,transaction_id,actas_id,tester_id,accepter_id
+'3.2','0200/0210','Balance Inquiry – Savings Account',,4834460100000082',',00',00',',',',000',,5000',00',',1234',2018/05/05',SIT',1','ACQ CRNCY CDE=764',1',1',1',2',1',1'
+,,,,,,,,,,,,,,,,,,,,,,,,,,

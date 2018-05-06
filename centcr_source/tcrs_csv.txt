@@ -1,0 +1,33 @@
+case_no varchar not null,
+mti varchar,
+case_name varchar,
+purpose varchar,
+card_no varchar,
+f4 varchar,
+f39_exp varchar,
+f39_visa varchar,
+f39_mastercard varchar,
+f39_itmx varchar,
+f39_pcc varchar,
+f39_eps varchar,
+f39_clsp varchar,
+f39_clst varchar,
+f39_cardm varchar,
+f39_cbs varchar,
+seq_no varchar,
+tdate varchar,
+lgnt varchar,
+status_id integer not null references status,
+progress_comment varchar,
+project_id integer not null references projects,
+switching_id integer not null references switchings,
+transaction_id integer not null references transactions,
+actas_id integer not null references actas,
+tester_id integer not null references testers,
+accepter_id integer not null references accepters
+
+
+
+
+'3.2'	'0200/0210'	'Balance Inquiry – Savings Account'	''	'4834460100000082'	''	'00'	'00'	''	''	''	'000'		'5000'	'00'	''	'1234'	'2018/05/05'	'SIT'	'1'	'ACQ CRNCY CDE=764'	'1'	'1'	'1'	'2'	'1'	'1'
+'3.2'
