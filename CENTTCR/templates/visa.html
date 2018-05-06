@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    CENTRALIZED TEST CASES & TEST RESULTS
+{% endblock %}
+
+{% block body %}
+    <h1>VISA Transactions</h1>
+
+    <div class="container">
+        <table class="table">
+        <!--<table class="w3-table w3-bordered w3-striped">-->
+            <thead>
+                <tr>
+                    <th>Case No.</th>
+                    <th>MTI</th>
+                    <th>Case Name</th>
+                    <th>Purpose</th>
+                    <th>Card No.</th>
+                    <th>Amount</th>
+                    <th>Expected RC</th>
+                    <th>Switching RC</th>
+                    <th>EPS RC</th>
+                    <th>CLS PTLF RC</th>
+                    <th>CLS TLF RC</th>
+                    <th>CARDM RC</th>
+                    <th>CBS RC</th>
+                    <th>SEQ No.</th>
+                    <th>TEST DATE</th>
+                    <th>LGNT</th>
+                    <th>Status</th>
+                    <th>Progress & Comment</th>
+                    <th>Project Name</th>
+                    <th>Switching Name</th>
+                    <th>Trans Type</th>
+                    <th>Act As</th>
+                    <th>Tester</th>
+                    <th>Accepter</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tcr in tcrs %}
+                    <tr>
+                        {%for i in range(0,(tcr | length)) %}
+                            <td>{{ tcr[i] }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

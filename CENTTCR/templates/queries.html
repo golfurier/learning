@@ -7,12 +7,12 @@
 {% block body %}
     <h1>Query TEST CASES & TEST RESULTS By Switchings</h1>
 
-    <form action="{{ url_for('visa') }}">
+    <form action="{{ url_for('query')}}" method = "POST">
 
         <div class="form-group">
-            <select class="form-control" name="sw_id">
+            <select class="form-control" name="sw_name">
                 {% for sw in sws %}
-                    <option value="{{ sw.id }}">{{ sw.sw_name }}</option>
+                    <option value="{{ sw.sw_name }}">{{ sw.sw_name }}</option>
                 {% endfor %}
             </select>
         </div>
